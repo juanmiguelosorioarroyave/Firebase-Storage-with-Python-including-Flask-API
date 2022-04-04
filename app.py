@@ -25,7 +25,7 @@ app = Flask(__name__)
 def basic():
     if request.method == 'POST':       
         upload = request.files['upload']
-        storage.child("images/new.jpg").put(upload)
+        storage.child("images/").put(upload)
         return redirect(url_for('uploads'))
     return render_template('index.html')
 
